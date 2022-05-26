@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lovely
+  name: peolo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: lovely
+      app: peolo
   template:
     metadata:
       labels:
-        app: lovely
+        app: peolo
     spec:
       containers:
-      - image: okteto.dev/lovely:latest
-        name: lovely
+      - image: okteto.dev/peolo:latest
+        name: peolo
         ports:
         - containerPort: 8080
         env:
