@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: skill
+  name: spare
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: skill
+      app: spare
   template:
     metadata:
       labels:
-        app: skill
+        app: spare
     spec:
       containers:
-      - image: okteto.dev/skill:latest
-        name: skill
+      - image: okteto.dev/spare:latest
+        name: spare
         ports:
         - containerPort: 8080
         env:
