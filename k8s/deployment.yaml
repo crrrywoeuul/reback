@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spare
+  name: alwasys
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spare
+      app: always
   template:
     metadata:
       labels:
-        app: spare
+        app: always
     spec:
       containers:
-      - image: okteto.dev/spare:latest
-        name: spare
+      - image: okteto.dev/always:latest
+        name: always
         ports:
         - containerPort: 8080
         env:
