@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: peolo
+  name: skill
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: peolo
+      app: skill
   template:
     metadata:
       labels:
-        app: peolo
+        app: skill
     spec:
       containers:
-      - image: okteto.dev/peolo:latest
-        name: peolo
+      - image: okteto.dev/skill:latest
+        name: skill
         ports:
         - containerPort: 8080
         env:
