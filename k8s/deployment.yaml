@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lovely
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lovely
+  template:
+    metadata:
+      labels:
+        app: lovely
+    spec:
+      containers:
+      - image: okteto.dev/lovely:latest
+        name: lovely
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "mirror.umd.edu"
+        - name: Vless_UUID
+          value: "dca3cee3-53c3-4196-bb35-39cc1d552511"
+        - name: Vless_Path
+          value: "/heel"
+        - name: Vmess_UUID
+          value: "dca3cee3-53c3-4196-bb35-39cc1d552511"
+        - name: Vmess_Path
+          value: "/heemo"
+        - name: Share_Path
+          value: "/ussss"
